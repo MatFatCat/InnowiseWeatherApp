@@ -11,6 +11,12 @@
 		11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8172721E1A000DE8FAA /* ContentView.swift */; };
 		11FCF81A2721E1A500DE8FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FCF8192721E1A500DE8FAA /* Assets.xcassets */; };
 		11FCF81D2721E1A500DE8FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FCF81C2721E1A500DE8FAA /* Preview Assets.xcassets */; };
+		11FCF8282721E38600DE8FAA /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8272721E38600DE8FAA /* Forecast.swift */; };
+		11FCF82B2721E99100DE8FAA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF82A2721E99100DE8FAA /* NetworkManager.swift */; };
+		11FCF82E2721EC6800DE8FAA /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF82D2721EC6800DE8FAA /* LocationViewModel.swift */; };
+		11FCF8302721EDBD00DE8FAA /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF82F2721EDBD00DE8FAA /* RequestLocationView.swift */; };
+		11FCF8322721EE0C00DE8FAA /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8312721EE0C00DE8FAA /* ErrorView.swift */; };
+		11FCF8342721EE3200DE8FAA /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8332721EE3200DE8FAA /* TrackingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		11FCF8172721E1A000DE8FAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11FCF8192721E1A500DE8FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11FCF81C2721E1A500DE8FAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11FCF8272721E38600DE8FAA /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		11FCF82A2721E99100DE8FAA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		11FCF82D2721EC6800DE8FAA /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		11FCF82F2721EDBD00DE8FAA /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
+		11FCF8312721EE0C00DE8FAA /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		11FCF8332721EE3200DE8FAA /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,11 @@
 		11FCF8142721E1A000DE8FAA /* InnowiseWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */,
-				11FCF8172721E1A000DE8FAA /* ContentView.swift */,
+				11FCF82C2721EC4500DE8FAA /* ViewModels */,
+				11FCF8262721E35E00DE8FAA /* Network */,
+				11FCF8252721E34D00DE8FAA /* Models */,
+				11FCF8242721E33D00DE8FAA /* App */,
+				11FCF8232721E33300DE8FAA /* Views */,
 				11FCF8192721E1A500DE8FAA /* Assets.xcassets */,
 				11FCF81B2721E1A500DE8FAA /* Preview Content */,
 			);
@@ -65,6 +80,49 @@
 				11FCF81C2721E1A500DE8FAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11FCF8232721E33300DE8FAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11FCF8172721E1A000DE8FAA /* ContentView.swift */,
+				11FCF82F2721EDBD00DE8FAA /* RequestLocationView.swift */,
+				11FCF8312721EE0C00DE8FAA /* ErrorView.swift */,
+				11FCF8332721EE3200DE8FAA /* TrackingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11FCF8242721E33D00DE8FAA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		11FCF8252721E34D00DE8FAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11FCF8272721E38600DE8FAA /* Forecast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11FCF8262721E35E00DE8FAA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				11FCF82A2721E99100DE8FAA /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		11FCF82C2721EC4500DE8FAA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				11FCF82D2721EC6800DE8FAA /* LocationViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FCF82B2721E99100DE8FAA /* NetworkManager.swift in Sources */,
 				11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */,
+				11FCF8342721EE3200DE8FAA /* TrackingView.swift in Sources */,
+				11FCF8302721EDBD00DE8FAA /* RequestLocationView.swift in Sources */,
+				11FCF8282721E38600DE8FAA /* Forecast.swift in Sources */,
+				11FCF8322721EE0C00DE8FAA /* ErrorView.swift in Sources */,
+				11FCF82E2721EC6800DE8FAA /* LocationViewModel.swift in Sources */,
 				11FCF8162721E1A000DE8FAA /* InnowiseWeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +336,7 @@
 				DEVELOPMENT_TEAM = FCR2GV8P2G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Big brother needs to track you ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +367,7 @@
 				DEVELOPMENT_TEAM = FCR2GV8P2G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Big brother needs to track you ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

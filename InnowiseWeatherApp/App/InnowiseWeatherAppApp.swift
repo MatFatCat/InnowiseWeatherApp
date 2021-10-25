@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct InnowiseWeatherAppApp: App {
+    
+    @StateObject var locationViewModel = LocationViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(locationViewModel)
         }
     }
 }
