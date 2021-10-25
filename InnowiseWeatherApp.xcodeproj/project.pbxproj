@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		119738032726F42400891FCA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119738022726F42400891FCA /* HeaderView.swift */; };
 		11FCF8162721E1A000DE8FAA /* InnowiseWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */; };
 		11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8172721E1A000DE8FAA /* ContentView.swift */; };
 		11FCF81A2721E1A500DE8FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FCF8192721E1A500DE8FAA /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		119738022726F42400891FCA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		11FCF8122721E1A000DE8FAA /* InnowiseWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnowiseWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnowiseWeatherAppApp.swift; sourceTree = "<group>"; };
 		11FCF8172721E1A000DE8FAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,8 +89,9 @@
 			children = (
 				11FCF8172721E1A000DE8FAA /* ContentView.swift */,
 				11FCF82F2721EDBD00DE8FAA /* RequestLocationView.swift */,
-				11FCF8312721EE0C00DE8FAA /* ErrorView.swift */,
 				11FCF8332721EE3200DE8FAA /* TrackingView.swift */,
+				119738022726F42400891FCA /* HeaderView.swift */,
+				11FCF8312721EE0C00DE8FAA /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FCF82B2721E99100DE8FAA /* NetworkManager.swift in Sources */,
+				119738032726F42400891FCA /* HeaderView.swift in Sources */,
 				11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */,
 				11FCF8342721EE3200DE8FAA /* TrackingView.swift in Sources */,
 				11FCF8302721EDBD00DE8FAA /* RequestLocationView.swift in Sources */,
