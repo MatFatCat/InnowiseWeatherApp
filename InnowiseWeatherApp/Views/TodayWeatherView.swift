@@ -30,7 +30,7 @@ struct TodayWeatherView: View {
         VStack {
             
             VStack {
-                Image(systemName: "cloud.moon.fill" )
+                Image(self.forecast.current?.weather?[0].icon ?? "01d" )
                     .resizable()
                     .frame(width: geometry.size.width*0.3, height: geometry.size.height*0.1, alignment: .center)
                 
@@ -50,6 +50,7 @@ struct TodayWeatherView: View {
                     Text("\(self.forecast.current?.weather?[0].description ?? String(0))")
                         .font(.system(size: 15, weight: .light))
                         .foregroundColor(.white)
+
                 }
             }
             .background(LinearGradient(colors: [.blue, .white], startPoint: .bottom, endPoint: .top))

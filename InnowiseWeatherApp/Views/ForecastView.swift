@@ -31,7 +31,7 @@ struct ForecastView: View {
                     NavigationView {
                         List(0..<self.forecast.hourly!.count) { i in
                             NavigationLink(destination: Text("Some View")) {
-                                ForecastRawView(date: self.forecast.hourly![i].dt!, temp: self.forecast.hourly![i].temp!, icom: "cloud.moon.fill", description: self.forecast.hourly![i].weather![0].description!, geometry: geometry)
+                                ForecastRawView(date: self.forecast.hourly![i].dt!, temp: self.forecast.hourly![i].temp!, iconPath: (self.forecast.hourly![i].weather?[0].icon)!, description: self.forecast.hourly![i].weather![0].description!, geometry: geometry)
                             }
                         }
                     }

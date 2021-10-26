@@ -12,7 +12,7 @@ struct ForecastRawView: View {
     
     @State var date: Date
     @State var temp: Double
-    @State var icom: String
+    @State var iconPath: String
     @State var description: String
     @State var geometry: GeometryProxy
     
@@ -25,7 +25,7 @@ struct ForecastRawView: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "cloud.moon.fill")
+            Image(self.iconPath)
                 .resizable()
                 .frame(width: geometry.size.width*0.2, height: geometry.size.width*0.2)
             
@@ -40,7 +40,7 @@ struct ForecastRawView: View {
             
             Spacer()
             
-            Text(String(Int(self.temp)))//Big blue temp
+            Text(String(Int(self.temp)) + "°")//Big blue temp
                 .font(.system(size: 30, weight: .bold, design: .serif))
                 .foregroundColor(.blue)
         }
