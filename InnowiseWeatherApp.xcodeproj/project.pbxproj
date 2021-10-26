@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		119738032726F42400891FCA /* TodaysWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119738022726F42400891FCA /* TodaysWeatherView.swift */; };
+		1100900E2727E78200BDE4FF /* ForecastRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1100900D2727E78200BDE4FF /* ForecastRawView.swift */; };
+		119738032726F42400891FCA /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119738022726F42400891FCA /* TodayWeatherView.swift */; };
 		1197380527272FDA00891FCA /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197380427272FDA00891FCA /* ForecastView.swift */; };
 		11FCF8162721E1A000DE8FAA /* InnowiseWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */; };
 		11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8172721E1A000DE8FAA /* ContentView.swift */; };
@@ -22,7 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		119738022726F42400891FCA /* TodaysWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysWeatherView.swift; sourceTree = "<group>"; };
+		1100900D2727E78200BDE4FF /* ForecastRawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRawView.swift; sourceTree = "<group>"; };
+		119738022726F42400891FCA /* TodayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
 		1197380427272FDA00891FCA /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		11FCF8122721E1A000DE8FAA /* InnowiseWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnowiseWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnowiseWeatherAppApp.swift; sourceTree = "<group>"; };
@@ -91,9 +93,10 @@
 			children = (
 				11FCF8172721E1A000DE8FAA /* ContentView.swift */,
 				11FCF8332721EE3200DE8FAA /* TrackingView.swift */,
-				119738022726F42400891FCA /* TodaysWeatherView.swift */,
+				119738022726F42400891FCA /* TodayWeatherView.swift */,
 				1197380427272FDA00891FCA /* ForecastView.swift */,
 				11FCF8312721EE0C00DE8FAA /* ErrorView.swift */,
+				1100900D2727E78200BDE4FF /* ForecastRawView.swift */,
 				11FCF82F2721EDBD00DE8FAA /* RequestLocationView.swift */,
 			);
 			path = Views;
@@ -203,11 +206,12 @@
 			files = (
 				11FCF82B2721E99100DE8FAA /* NetworkManager.swift in Sources */,
 				1197380527272FDA00891FCA /* ForecastView.swift in Sources */,
-				119738032726F42400891FCA /* TodaysWeatherView.swift in Sources */,
+				119738032726F42400891FCA /* TodayWeatherView.swift in Sources */,
 				11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */,
 				11FCF8342721EE3200DE8FAA /* TrackingView.swift in Sources */,
 				11FCF8302721EDBD00DE8FAA /* RequestLocationView.swift in Sources */,
 				11FCF8282721E38600DE8FAA /* Forecast.swift in Sources */,
+				1100900E2727E78200BDE4FF /* ForecastRawView.swift in Sources */,
 				11FCF8322721EE0C00DE8FAA /* ErrorView.swift in Sources */,
 				11FCF82E2721EC6800DE8FAA /* LocationViewModel.swift in Sources */,
 				11FCF8162721E1A000DE8FAA /* InnowiseWeatherAppApp.swift in Sources */,

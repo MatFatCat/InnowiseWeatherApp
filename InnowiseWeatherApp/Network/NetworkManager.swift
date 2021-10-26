@@ -10,8 +10,8 @@ import Foundation
 
 class NetworkManager {
     
-    var lon: Double = 0.0
-    var lat: Double = 0.0
+    var lon: Double
+    var lat: Double
     
     init(lat: Double, lon: Double) {
         self.lat = lat

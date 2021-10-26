@@ -16,13 +16,13 @@ struct TrackingView: View {
     var body: some View {
         GeometryReader { geometry in
             TabView {
-                TodaysWeatherView(geometry: geometry).environmentObject(locationViewModel)
+                TodayWeatherView(geometry: geometry).environmentObject(locationViewModel)
                     .tabItem {
                         Image(systemName: "sun.min")
                         Text("Today")
                     }
                 
-                ForecastView()
+                ForecastView().environmentObject(locationViewModel)
                     .tabItem {
                         Image(systemName: "calendar.circle.fill")
                         Text("Forecast")
