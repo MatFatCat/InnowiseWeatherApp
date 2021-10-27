@@ -145,10 +145,10 @@
 		11FCF8232721E33300DE8FAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1134B29027298C4600933BA7 /* ForecastViews */,
 				1134B28F27298C2A00933BA7 /* StarterViews */,
-				1134B28E27298C0A00933BA7 /* OtherViews */,
+				1134B29027298C4600933BA7 /* ForecastViews */,
 				1134B28D27298BF300933BA7 /* TodayWeatherViews */,
+				1134B28E27298C0A00933BA7 /* OtherViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";

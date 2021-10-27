@@ -30,7 +30,7 @@ struct TodayWeatherView: View {
     }
     
     var body: some View {
-    
+        
         VStack(spacing: self.geometry.size.width*0.1) {
             if self.forecast.list != nil {
                 VStack {
@@ -58,11 +58,6 @@ struct TodayWeatherView: View {
             
             self.networkManager.getData { (dataFromAPI) in
                 self.forecast = dataFromAPI
-            }
-            
-            if self.forecast.list != nil {
-                
-                print(self.forecast.list![0].main?.temp)
             }
         }
     }
