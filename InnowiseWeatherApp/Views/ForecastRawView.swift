@@ -19,7 +19,7 @@ struct ForecastRawView: View {
     func dateToString(date: Date) -> String {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
+        dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .short
         return dateFormatter.string(from: date)
     }

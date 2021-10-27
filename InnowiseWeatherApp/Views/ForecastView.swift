@@ -17,24 +17,20 @@ struct ForecastView: View {
     var coordinate: CLLocationCoordinate2D? {
         return locationViewModel.lastSeenLocation?.coordinate
     }
-    
-    func prepareCoordinates() {
-        self.networkManager.lon = self.locationViewModel.lastSeenLocation?.coordinate.longitude ?? 0.0
-        self.networkManager.lat = self.locationViewModel.lastSeenLocation?.coordinate.latitude ?? 0.0
-    }
 
     var body: some View {
         VStack{
             GeometryReader { geometry in
-                if self.forecast.hourly != nil {
-                    List(0..<self.forecast.hourly!.count) { i in
-                        ForecastRawView(date: self.forecast.hourly![i].dt!, temp: self.forecast.hourly![i].temp!, iconPath: (self.forecast.hourly![i].weather?[0].icon)!, description: self.forecast.hourly![i].weather![0].description!, geometry: geometry)
+                if self.forecast.list != nil {
+                    List(0..<self.forecast.list!.count) { i in
+                        ForecastRawView(date: self.forecast.list![i].dt!, temp: self.forecast.list![i].main!.temp!, iconPath: self.forecast.list![i].weather![0].icon!, description: self.forecast.list![i].weather![0].description!, geometry: geometry)
                     }
                 }
             }
         }
         .onAppear {
-            prepareCoordinates()
+            self.networkManager.lon = self.locationViewModel.lastSeenLocation?.coordinate.longitude ?? 0.0
+            self.networkManager.lat = self.locationViewModel.lastSeenLocation?.coordinate.latitude ?? 0.0
             
             self.networkManager.getData { (dataFromAPI) in
                 self.forecast = dataFromAPI
@@ -42,16 +38,3 @@ struct ForecastView: View {
         }
     }
 }
-
-
-//NavigationView {
-//    List(0..<self.forecast.hourly!.count) { i in
-//        if i%3 == 0 {
-//            LazyVStack {
-//                NavigationLink(destination: Text("Some View")) {
-//                    ForecastRawView(date: self.forecast.hourly![i].dt!, temp: self.forecast.hourly![i].temp!, iconPath: (self.forecast.hourly![i].weather?[0].icon)!, description: self.forecast.hourly![i].weather![0].description!, geometry: geometry)
-//                }
-//            }
-//        }
-//    }
-//}

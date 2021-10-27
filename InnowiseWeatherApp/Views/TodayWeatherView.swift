@@ -18,39 +18,13 @@ struct TodayWeatherView: View {
     var coordinate: CLLocationCoordinate2D? {
         return locationViewModel.lastSeenLocation?.coordinate
     }
-    
-    func prepareCoordinates() {
-        
-        self.networkManager.lon = self.locationViewModel.lastSeenLocation?.coordinate.longitude ?? 0.0
-        self.networkManager.lat = self.locationViewModel.lastSeenLocation?.coordinate.latitude ?? 0.0
-    }
 
     
     var body: some View {
         VStack {
-            
             VStack {
-                Image(self.forecast.current?.weather?[0].icon ?? "01d" )
-                    .resizable()
-                    .frame(width: geometry.size.width*0.3, height: geometry.size.height*0.25, alignment: .center)
-                
-                HStack {
-                    Text(locationViewModel.currentPlacemark?.country ?? "No Data" + ", ")
-                        .font(.system(size: 50, weight: .bold))
-                        .foregroundColor(.white)
-                    Text(locationViewModel.currentPlacemark?.administrativeArea ?? "No Data")
-                        .font(.system(size: 50, weight: .bold))
-                        .foregroundColor(.white)
-                }
-
-                HStack {
-                    Text("\(Int(self.forecast.current?.temp ?? 0))°C, ")
-                        .font(.system(size: 15, weight: .light))
-                        .foregroundColor(.white)
-                    Text("\(self.forecast.current?.weather?[0].description ?? String(0))")
-                        .font(.system(size: 15, weight: .light))
-                        .foregroundColor(.white)
-
+                if forecast.list != nil {
+                    TodayWeatherHeaderView(forecast: self.forecast, geometry: self.geometry).environmentObject(locationViewModel)
                 }
             }
             .background(LinearGradient(colors: [.blue, .white], startPoint: .bottom, endPoint: .top))
@@ -60,7 +34,8 @@ struct TodayWeatherView: View {
         }
         .onAppear {
             
-            prepareCoordinates()
+            self.networkManager.lon = self.locationViewModel.lastSeenLocation?.coordinate.longitude ?? 0.0
+            self.networkManager.lat = self.locationViewModel.lastSeenLocation?.coordinate.latitude ?? 0.0
             
             self.networkManager.getData { (dataFromAPI) in
                 self.forecast = dataFromAPI
@@ -68,3 +43,4 @@ struct TodayWeatherView: View {
         }
     }
 }
+

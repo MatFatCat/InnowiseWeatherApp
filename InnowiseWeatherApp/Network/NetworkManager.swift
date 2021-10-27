@@ -19,7 +19,10 @@ class NetworkManager {
     }
     
     func getData(completion: @escaping (Forecast) -> ()) {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(self.lat)&lon=\(self.lon)&exclude=minutely,alerts,daily&appid=b7b8b2556896d0d525671ee829caa4bb&units=metric") else { return }
+        
+        let apiKey = "b7b8b2556896d0d525671ee829caa4bb"
+        
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=\(self.lat)&lon=\(self.lon)&exclude=minutely,alerts,daily&appid=\(apiKey)&units=metric") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { return }
