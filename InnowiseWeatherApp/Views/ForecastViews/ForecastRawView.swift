@@ -33,10 +33,10 @@ struct ForecastRawView: View {
             VStack {
                 Text(self.dateToString(date: self.date))
                     .font(.system(size: 10, weight: .light, design: .serif))
-                    .foregroundColor(.black)
+                    .foregroundColor(.gray)
                 Text(self.description)
                     .font(.system(size: 10, weight: .light, design: .serif))
-                    .foregroundColor(.black)
+                    .foregroundColor(.gray)
             }
             
             Spacer()

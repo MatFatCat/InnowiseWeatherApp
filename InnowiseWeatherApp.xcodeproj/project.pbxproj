@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1100900E2727E78200BDE4FF /* ForecastRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1100900D2727E78200BDE4FF /* ForecastRawView.swift */; };
 		1134B28C27298B4E00933BA7 /* TodayWeatherHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134B28B27298B4E00933BA7 /* TodayWeatherHeaderView.swift */; };
+		1134B29227298C9C00933BA7 /* TodayWeatherParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134B29127298C9C00933BA7 /* TodayWeatherParametersView.swift */; };
+		1134B2972729924900933BA7 /* ParameterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134B2962729924900933BA7 /* ParameterCellView.swift */; };
+		1134B2992729985700933BA7 /* WindDirectionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134B2982729985700933BA7 /* WindDirectionDelegator.swift */; };
 		119738032726F42400891FCA /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119738022726F42400891FCA /* TodayWeatherView.swift */; };
 		1197380527272FDA00891FCA /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197380427272FDA00891FCA /* ForecastView.swift */; };
 		11FCF8162721E1A000DE8FAA /* InnowiseWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		1100900D2727E78200BDE4FF /* ForecastRawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRawView.swift; sourceTree = "<group>"; };
 		1134B28B27298B4E00933BA7 /* TodayWeatherHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherHeaderView.swift; sourceTree = "<group>"; };
+		1134B29127298C9C00933BA7 /* TodayWeatherParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherParametersView.swift; sourceTree = "<group>"; };
+		1134B2962729924900933BA7 /* ParameterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterCellView.swift; sourceTree = "<group>"; };
+		1134B2982729985700933BA7 /* WindDirectionDelegator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindDirectionDelegator.swift; sourceTree = "<group>"; };
 		119738022726F42400891FCA /* TodayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
 		1197380427272FDA00891FCA /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		11FCF8122721E1A000DE8FAA /* InnowiseWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnowiseWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,9 +58,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1134B28D27298BF300933BA7 /* TodayWeatherViews */ = {
+			isa = PBXGroup;
+			children = (
+				1134B2952729923200933BA7 /* ParameterCell */,
+				119738022726F42400891FCA /* TodayWeatherView.swift */,
+				1134B28B27298B4E00933BA7 /* TodayWeatherHeaderView.swift */,
+				1134B29127298C9C00933BA7 /* TodayWeatherParametersView.swift */,
+			);
+			path = TodayWeatherViews;
+			sourceTree = "<group>";
+		};
+		1134B28E27298C0A00933BA7 /* OtherViews */ = {
+			isa = PBXGroup;
+			children = (
+				11FCF8312721EE0C00DE8FAA /* ErrorView.swift */,
+				11FCF82F2721EDBD00DE8FAA /* RequestLocationView.swift */,
+			);
+			path = OtherViews;
+			sourceTree = "<group>";
+		};
+		1134B28F27298C2A00933BA7 /* StarterViews */ = {
+			isa = PBXGroup;
+			children = (
+				11FCF8332721EE3200DE8FAA /* TrackingView.swift */,
+				11FCF8172721E1A000DE8FAA /* ContentView.swift */,
+			);
+			path = StarterViews;
+			sourceTree = "<group>";
+		};
+		1134B29027298C4600933BA7 /* ForecastViews */ = {
+			isa = PBXGroup;
+			children = (
+				1197380427272FDA00891FCA /* ForecastView.swift */,
+				1100900D2727E78200BDE4FF /* ForecastRawView.swift */,
+			);
+			path = ForecastViews;
+			sourceTree = "<group>";
+		};
+		1134B2952729923200933BA7 /* ParameterCell */ = {
+			isa = PBXGroup;
+			children = (
+				1134B2962729924900933BA7 /* ParameterCellView.swift */,
+			);
+			path = ParameterCell;
+			sourceTree = "<group>";
+		};
 		11FCF8092721E1A000DE8FAA = {
 			isa = PBXGroup;
 			children = (
+				11FCF8192721E1A500DE8FAA /* Assets.xcassets */,
 				11FCF8142721E1A000DE8FAA /* InnowiseWeatherApp */,
 				11FCF8132721E1A000DE8FAA /* Products */,
 			);
@@ -76,7 +129,6 @@
 				11FCF8252721E34D00DE8FAA /* Models */,
 				11FCF8242721E33D00DE8FAA /* App */,
 				11FCF8232721E33300DE8FAA /* Views */,
-				11FCF8192721E1A500DE8FAA /* Assets.xcassets */,
 				11FCF81B2721E1A500DE8FAA /* Preview Content */,
 			);
 			path = InnowiseWeatherApp;
@@ -93,14 +145,10 @@
 		11FCF8232721E33300DE8FAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				11FCF8172721E1A000DE8FAA /* ContentView.swift */,
-				11FCF8332721EE3200DE8FAA /* TrackingView.swift */,
-				119738022726F42400891FCA /* TodayWeatherView.swift */,
-				1197380427272FDA00891FCA /* ForecastView.swift */,
-				11FCF8312721EE0C00DE8FAA /* ErrorView.swift */,
-				1100900D2727E78200BDE4FF /* ForecastRawView.swift */,
-				11FCF82F2721EDBD00DE8FAA /* RequestLocationView.swift */,
-				1134B28B27298B4E00933BA7 /* TodayWeatherHeaderView.swift */,
+				1134B29027298C4600933BA7 /* ForecastViews */,
+				1134B28F27298C2A00933BA7 /* StarterViews */,
+				1134B28E27298C0A00933BA7 /* OtherViews */,
+				1134B28D27298BF300933BA7 /* TodayWeatherViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				11FCF8272721E38600DE8FAA /* Forecast.swift */,
+				1134B2982729985700933BA7 /* WindDirectionDelegator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +258,8 @@
 			files = (
 				11FCF82B2721E99100DE8FAA /* NetworkManager.swift in Sources */,
 				1197380527272FDA00891FCA /* ForecastView.swift in Sources */,
+				1134B2972729924900933BA7 /* ParameterCellView.swift in Sources */,
+				1134B2992729985700933BA7 /* WindDirectionDelegator.swift in Sources */,
 				119738032726F42400891FCA /* TodayWeatherView.swift in Sources */,
 				11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */,
 				11FCF8342721EE3200DE8FAA /* TrackingView.swift in Sources */,
@@ -216,6 +267,7 @@
 				11FCF8282721E38600DE8FAA /* Forecast.swift in Sources */,
 				1100900E2727E78200BDE4FF /* ForecastRawView.swift in Sources */,
 				1134B28C27298B4E00933BA7 /* TodayWeatherHeaderView.swift in Sources */,
+				1134B29227298C9C00933BA7 /* TodayWeatherParametersView.swift in Sources */,
 				11FCF8322721EE0C00DE8FAA /* ErrorView.swift in Sources */,
 				11FCF82E2721EC6800DE8FAA /* LocationViewModel.swift in Sources */,
 				11FCF8162721E1A000DE8FAA /* InnowiseWeatherAppApp.swift in Sources */,
