@@ -14,6 +14,7 @@
 		1134B2992729985700933BA7 /* WindDirectionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134B2982729985700933BA7 /* WindDirectionDelegator.swift */; };
 		119738032726F42400891FCA /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119738022726F42400891FCA /* TodayWeatherView.swift */; };
 		1197380527272FDA00891FCA /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197380427272FDA00891FCA /* ForecastView.swift */; };
+		11B1EE7B2729D32E00967A7A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1EE7A2729D32E00967A7A /* LoadingView.swift */; };
 		11FCF8162721E1A000DE8FAA /* InnowiseWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */; };
 		11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCF8172721E1A000DE8FAA /* ContentView.swift */; };
 		11FCF81A2721E1A500DE8FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FCF8192721E1A500DE8FAA /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		1134B2982729985700933BA7 /* WindDirectionDelegator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindDirectionDelegator.swift; sourceTree = "<group>"; };
 		119738022726F42400891FCA /* TodayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
 		1197380427272FDA00891FCA /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
+		11B1EE7A2729D32E00967A7A /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		11FCF8122721E1A000DE8FAA /* InnowiseWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnowiseWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FCF8152721E1A000DE8FAA /* InnowiseWeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnowiseWeatherAppApp.swift; sourceTree = "<group>"; };
 		11FCF8172721E1A000DE8FAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			path = ParameterCell;
 			sourceTree = "<group>";
 		};
+		11B1EE792729D31500967A7A /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				11B1EE7A2729D32E00967A7A /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		11FCF8092721E1A000DE8FAA = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,7 @@
 		11FCF8232721E33300DE8FAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11B1EE792729D31500967A7A /* LoadingView */,
 				1134B28F27298C2A00933BA7 /* StarterViews */,
 				1134B29027298C4600933BA7 /* ForecastViews */,
 				1134B28D27298BF300933BA7 /* TodayWeatherViews */,
@@ -261,6 +272,7 @@
 				1134B2972729924900933BA7 /* ParameterCellView.swift in Sources */,
 				1134B2992729985700933BA7 /* WindDirectionDelegator.swift in Sources */,
 				119738032726F42400891FCA /* TodayWeatherView.swift in Sources */,
+				11B1EE7B2729D32E00967A7A /* LoadingView.swift in Sources */,
 				11FCF8182721E1A000DE8FAA /* ContentView.swift in Sources */,
 				11FCF8342721EE3200DE8FAA /* TrackingView.swift in Sources */,
 				11FCF8302721EDBD00DE8FAA /* RequestLocationView.swift in Sources */,
