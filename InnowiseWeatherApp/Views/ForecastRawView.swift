@@ -19,7 +19,8 @@ struct ForecastRawView: View {
     func dateToString(date: Date) -> String {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YY/MM/dd"
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
         return dateFormatter.string(from: date)
     }
     
@@ -30,17 +31,17 @@ struct ForecastRawView: View {
                 .frame(width: geometry.size.width*0.2, height: geometry.size.width*0.2)
             
             VStack {
-                Text(self.dateToString(date: self.date))//date
+                Text(self.dateToString(date: self.date))
                     .font(.system(size: 10, weight: .light, design: .serif))
                     .foregroundColor(.black)
-                Text(self.description)//description
+                Text(self.description)
                     .font(.system(size: 10, weight: .light, design: .serif))
                     .foregroundColor(.black)
             }
             
             Spacer()
             
-            Text(String(Int(self.temp)) + "°")//Big blue temp
+            Text(String(Int(self.temp)) + "°")//
                 .font(.system(size: 30, weight: .bold, design: .serif))
                 .foregroundColor(.blue)
         }

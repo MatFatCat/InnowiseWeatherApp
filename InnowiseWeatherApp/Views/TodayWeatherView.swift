@@ -32,7 +32,7 @@ struct TodayWeatherView: View {
             VStack {
                 Image(self.forecast.current?.weather?[0].icon ?? "01d" )
                     .resizable()
-                    .frame(width: geometry.size.width*0.3, height: geometry.size.height*0.1, alignment: .center)
+                    .frame(width: geometry.size.width*0.3, height: geometry.size.height*0.25, alignment: .center)
                 
                 HStack {
                     Text(locationViewModel.currentPlacemark?.country ?? "No Data" + ", ")

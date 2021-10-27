@@ -23,17 +23,12 @@ struct ForecastView: View {
         self.networkManager.lat = self.locationViewModel.lastSeenLocation?.coordinate.latitude ?? 0.0
     }
 
-    
     var body: some View {
         VStack{
             GeometryReader { geometry in
-                if self.forecast.hourly != nil {//Проверка на нил
-                    NavigationView {
-                        List(0..<self.forecast.hourly!.count) { i in
-                            NavigationLink(destination: Text("Some View")) {
-                                ForecastRawView(date: self.forecast.hourly![i].dt!, temp: self.forecast.hourly![i].temp!, iconPath: (self.forecast.hourly![i].weather?[0].icon)!, description: self.forecast.hourly![i].weather![0].description!, geometry: geometry)
-                            }
-                        }
+                if self.forecast.hourly != nil {
+                    List(0..<self.forecast.hourly!.count) { i in
+                        ForecastRawView(date: self.forecast.hourly![i].dt!, temp: self.forecast.hourly![i].temp!, iconPath: (self.forecast.hourly![i].weather?[0].icon)!, description: self.forecast.hourly![i].weather![0].description!, geometry: geometry)
                     }
                 }
             }
@@ -47,3 +42,16 @@ struct ForecastView: View {
         }
     }
 }
+
+
+//NavigationView {
+//    List(0..<self.forecast.hourly!.count) { i in
+//        if i%3 == 0 {
+//            LazyVStack {
+//                NavigationLink(destination: Text("Some View")) {
+//                    ForecastRawView(date: self.forecast.hourly![i].dt!, temp: self.forecast.hourly![i].temp!, iconPath: (self.forecast.hourly![i].weather?[0].icon)!, description: self.forecast.hourly![i].weather![0].description!, geometry: geometry)
+//                }
+//            }
+//        }
+//    }
+//}
