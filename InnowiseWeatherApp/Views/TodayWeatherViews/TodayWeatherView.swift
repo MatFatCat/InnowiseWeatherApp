@@ -22,7 +22,7 @@ struct TodayWeatherView: View {
     func actionSheet() { //Share The Weather
         if forecast.list == nil { return }
         
-        let informationToShare = "\(String((self.forecast.list![0].main?.humidity!)!))% | \(String(Double((self.forecast.list![0].main?.pressure)!/1000))) mm | \(String(Int((self.forecast.list![0].main?.pressure)!))) hPa | \(String(Int((self.forecast.list![0].wind?.speed)!*3.6))) km/h | \(WindDirectionDelegator.defineDirection(intWindDirection: (self.forecast.list![0].wind?.deg)! )!)"
+        let informationToShare = "\(String((self.forecast.list![0].main?.temp!)!))C° | \(String((self.forecast.list![0].main?.humidity!)!))% | \(String(Double((self.forecast.list![0].main?.pressure)!/1000)))mm | \(String(Int((self.forecast.list![0].main?.pressure)!)))hPa | \(String(Int((self.forecast.list![0].wind?.speed)!*3.6)))km/h | \(WindDirectionDelegator.defineDirection(intWindDirection: (self.forecast.list![0].wind?.deg)! )!)"
         
         let activityVC = UIActivityViewController(activityItems: [informationToShare], applicationActivities: nil)
         
@@ -32,7 +32,7 @@ struct TodayWeatherView: View {
     var body: some View {
     
         VStack(spacing: self.geometry.size.width*0.1) {
-            if forecast.list != nil {
+            if self.forecast.list != nil {
                 VStack {
                     TodayWeatherHeaderView(forecast: self.forecast, geometry: self.geometry).environmentObject(locationViewModel)
                 }
@@ -58,6 +58,11 @@ struct TodayWeatherView: View {
             
             self.networkManager.getData { (dataFromAPI) in
                 self.forecast = dataFromAPI
+            }
+            
+            if self.forecast.list != nil {
+                
+                print(self.forecast.list![0].main?.temp)
             }
         }
     }
