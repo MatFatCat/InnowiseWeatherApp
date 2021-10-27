@@ -9,12 +9,14 @@ import Foundation
 
 struct Forecast: Codable {
     var list: [threeHourWeatherForecast]?
+    
     struct threeHourWeatherForecast: Codable, Identifiable {
         let id = UUID()
         var dt: Date?
         var main: Main?
         var weather: [Weather]?
         var wind: Wind?
+        var dt_txt: String?
         
         struct Main: Codable, Identifiable {
             let id = UUID()
