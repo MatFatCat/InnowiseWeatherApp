@@ -10,11 +10,11 @@ import CoreLocation
 
 struct ForecastRawView: View {
     
-    @State var date: Date
     @State var temp: Double
     @State var iconPath: String
     @State var description: String
     @State var geometry: GeometryProxy
+    @State var txtDate: String
     
     func dateToString(date: Date) -> String {
         
@@ -31,18 +31,18 @@ struct ForecastRawView: View {
                 .frame(width: geometry.size.width*0.2, height: geometry.size.width*0.2)
             
             VStack {
-                Text(self.dateToString(date: self.date))
-                    .font(.system(size: 10, weight: .light, design: .serif))
+                Text(self.txtDate)
+                    .font(.system(size: 15, weight: .light))
                     .foregroundColor(.gray)
                 Text(self.description)
-                    .font(.system(size: 10, weight: .light, design: .serif))
+                    .font(.system(size: 15, weight: .light))
                     .foregroundColor(.gray)
             }
             
             Spacer()
             
             Text(String(Int(self.temp)) + "°")//
-                .font(.system(size: 30, weight: .bold, design: .serif))
+                .font(.system(size: 30, weight: .bold))
                 .foregroundColor(.blue)
         }
     }

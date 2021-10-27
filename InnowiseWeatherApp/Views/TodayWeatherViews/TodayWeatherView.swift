@@ -45,7 +45,7 @@ struct TodayWeatherView: View {
                     Text("Share The Weather")
                 }
                 .padding()
-                .background(LinearGradient(colors: [.blue,.white], startPoint: .top, endPoint: .bottom))
+                .background(Color.blue)
                 .clipShape(Capsule())
                 .foregroundColor(.white)
                 Spacer()

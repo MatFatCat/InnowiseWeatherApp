@@ -23,7 +23,7 @@ struct ForecastView: View {
             GeometryReader { geometry in
                 if self.forecast.list != nil {
                     List(0..<self.forecast.list!.count) { i in
-                        ForecastRawView(date: self.forecast.list![i].dt!, temp: self.forecast.list![i].main!.temp!, iconPath: self.forecast.list![i].weather![0].icon!, description: self.forecast.list![i].weather![0].description!, geometry: geometry)
+                        ForecastRawView(temp: self.forecast.list![i].main!.temp!, iconPath: self.forecast.list![i].weather![0].icon!, description: self.forecast.list![i].weather![0].description!, geometry: geometry, txtDate: self.forecast.list![i].dt_txt!)
                     }
                 }
             }
