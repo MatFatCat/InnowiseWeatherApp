@@ -19,7 +19,7 @@ struct TodayWeatherView: View {
         return locationViewModel.lastSeenLocation?.coordinate
     }
     
-    func actionSheet() { //Share The Weather
+    func actionSheet() {
         if forecast.list == nil { return }
         
         let informationToShare = "\(String((self.forecast.list![0].main?.temp!)!))C° | \(String((self.forecast.list![0].main?.humidity!)!))% | \(String(Double((self.forecast.list![0].main?.pressure)!/1000)))mm | \(String(Int((self.forecast.list![0].main?.pressure)!)))hPa | \(String(Int((self.forecast.list![0].wind?.speed)!*3.6)))km/h | \(WindDirectionDelegator.defineDirection(intWindDirection: (self.forecast.list![0].wind?.deg)! )!)"
@@ -36,18 +36,25 @@ struct TodayWeatherView: View {
                 VStack {
                     TodayWeatherHeaderView(forecast: self.forecast, geometry: self.geometry).environmentObject(locationViewModel)
                 }
+                .frame(width: self.geometry.size.width*0.75, height: self.geometry.size.height*0.3)
                 .background(LinearGradient(colors: [.blue, .white], startPoint: .bottom, endPoint: .top))
                 .cornerRadius(10)
                 
+                Spacer()
+                
                 TodayWeatherParametersView(forecast: self.forecast, geometry: self.geometry)
+                
+                Spacer()
                 
                 Button(action: actionSheet) {
                     Text("Share The Weather")
                 }
+                .frame(width: self.geometry.size.width*0.7, height: self.geometry.size.height*0.05)
                 .padding()
                 .background(Color.blue)
                 .clipShape(Capsule())
                 .foregroundColor(.white)
+                
                 Spacer()
             }
         }

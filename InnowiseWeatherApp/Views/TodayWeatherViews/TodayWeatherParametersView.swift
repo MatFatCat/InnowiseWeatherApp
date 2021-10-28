@@ -14,17 +14,17 @@ struct TodayWeatherParametersView: View {
     
     var body: some View {
     
-        Path() { path in
-            path.move(to: CGPoint(x: 0.2*geometry.size.width, y: 0.1*geometry.size.height))
-            path.addLine(to: CGPoint(x: 0.8*geometry.size.width, y: 0.1*geometry.size.height))
-        }
-        .stroke(Color.gray, lineWidth: 1)
+//        Path() { path in
+//            path.move(to: CGPoint(x: 0.2*geometry.size.width, y: 0.1*geometry.size.height))
+//            path.addLine(to: CGPoint(x: 0.8*geometry.size.width, y: 0.1*geometry.size.height))
+//        }
+//        .stroke(Color.gray, lineWidth: 1)
         
         
         VStack(spacing: self.geometry.size.width*0.1){
             
             HStack(spacing: self.geometry.size.width*0.1) {
-                ParameterCellView(geometry: self.geometry, forecast: self.forecast, informaion: "\(String((self.forecast.list![0].main?.humidity!)!))%", iconPath: "cloud.heavyrain")
+                ParameterCellView(geometry: self.geometry, forecast: self.forecast, informaion: "\(String((self.forecast.list![0].main?.humidity!)!))%", iconPath: "humidity")
                 
                 ParameterCellView(geometry: self.geometry, forecast: self.forecast, informaion: "\(String(Double((self.forecast.list![0].main?.pressure)!/1000))) mm", iconPath: "drop")
                 
@@ -39,10 +39,10 @@ struct TodayWeatherParametersView: View {
             }
         }
         
-        Path() { path in
-            path.move(to: CGPoint(x: 0.2*geometry.size.width, y: 0.001*geometry.size.height))
-            path.addLine(to: CGPoint(x: 0.8*geometry.size.width, y: 0.001*geometry.size.height))
-        }
-        .stroke(Color.gray, lineWidth: 1)
+//        Path() { path in
+//            path.move(to: CGPoint(x: 0.2*geometry.size.width, y: 0.001*geometry.size.height))
+//            path.addLine(to: CGPoint(x: 0.8*geometry.size.width, y: 0.001*geometry.size.height))
+//        }
+//        .stroke(Color.gray, lineWidth: 1)
     }
 }
