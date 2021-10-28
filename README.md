@@ -1,6 +1,6 @@
 # InnowiseWeatherApp
 
-<h3>The app is made with using Core Location, Swift UI technologies.</h3>
+<h2>The app is made with using Core Location, Swift UI technologies.</h2>
 
 <h2>The main screen of the app:</h2>
 
