@@ -8,4 +8,5 @@ The main screen of the app:
 
 
 The Forecast screen:
+
 <img src="https://user-images.githubusercontent.com/83066475/139294475-07346cbc-900d-4e54-bbcd-5199af3b37a6.jpeg" width="150" height="300">
